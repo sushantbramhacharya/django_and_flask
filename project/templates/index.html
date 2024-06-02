@@ -125,11 +125,13 @@
         <section class="products">
             <h2>Featured Products</h2>
             <div class="product-list">
+                {%for x in  %}
                 <div class="product-item">
                     <img src="https://via.placeholder.com/200" alt="Product 1">
                     <h3>Product 1</h3>
                     <p>$10.00</p>
                 </div>
+                {% comment %} 
                 <div class="product-item">
                     <img src="https://via.placeholder.com/200" alt="Product 2">
                     <h3>Product 2</h3>
@@ -139,7 +141,8 @@
                     <img src="https://via.placeholder.com/200" alt="Product 3">
                     <h3>Product 3</h3>
                     <p>$30.00</p>
-                </div>
+                </div> 
+                {% endcomment %}
             </div>
         </section>
     </main>
