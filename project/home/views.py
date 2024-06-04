@@ -25,14 +25,14 @@ def index(request):
 
     # output = ", ".join([q.question_text for q in latest_questions])
 
-    questions_text=[]
+    # questions_text=[]
 
-    for question in latest_questions:
-        questions_text.append(question.question_text)
+    # for question in latest_questions:
+    #     questions_text.append(question.question_text)
 
-    output='<br>'.join(questions_text)
+    # output='<br>'.join(questions_text)
 
-    return HttpResponse(output)
+    return render(request,'home/index.html',{'latest_questions':latest_questions})
 
 def detail(request, question_id):
     return HttpResponse("You're looking at question %s." % question_id)
