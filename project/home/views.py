@@ -1,5 +1,5 @@
-from django.shortcuts import render
-from django.http import HttpResponse
+from django.shortcuts import render,get_object_or_404
+from django.http import HttpResponse,Http404
 from .models import Question
 
 # Create your views here.
@@ -35,7 +35,14 @@ def index(request):
     return render(request,'home/index.html',{'latest_questions':latest_questions})
 
 def detail(request, question_id):
-    return HttpResponse("You're looking at question %s." % question_id)
+    # try:
+    #     question=Question.objects.get(pk=question_id)
+    # except Question.DoesNotExist:
+    #     raise Http404("Question not found")
+    
+    question = get_object_or_404(Question, pk=question_id)
+
+    return render(request,'home/detail.html',{'question':question})
 
 
 def results(request, question_id):
