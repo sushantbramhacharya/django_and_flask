@@ -5,6 +5,8 @@ urlpatterns = [
     # path('',views.home,name="home"),
     # path('products/',views.products,name="products"),
 
+    path('index/',views.index,name="index"),
+
     path("<int:question_id>/", views.detail, name="detail"),
     # ex: /polts/
     path("<int:question_id>/results/", views.results, name="results"),
