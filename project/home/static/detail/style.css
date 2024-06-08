@@ -1,0 +1,23 @@
+.button {
+    background-color: rgb(71, 184, 245);
+    border-radius: 10px;
+    margin: 10px;
+    border: none;
+    padding: 5px 10px;
+    color: white;
+}
+.button:hover{
+    background-color: rgb(39, 156, 219);
+}
+body{
+    text-align: center;
+    background:rgb(215, 215, 215);
+}
+fieldset{
+    display: inline;
+    border-radius: 20px;
+}
+
+h1,label{
+   font-family: monospace; 
+}

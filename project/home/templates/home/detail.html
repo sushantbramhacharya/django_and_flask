@@ -1,3 +1,5 @@
+{%load static%}
+<link rel="stylesheet" href="{% static 'detail/style.css' %}">
 <form action="./{{question.question_id}}vote/" method="post">
     {% csrf_token %}
     <fieldset>
@@ -7,6 +9,6 @@
             <input type="radio" name="choice" id="choice{{ forloop.counter }}" value="{{ choice.id }}">
             <label for="choice{{ forloop.counter }}">{{ choice.choice_text }}</label><br>
         {% endfor %}
-    </fieldset>
-    <input type="submit" value="Vote">
+    </fieldset> <br>
+    <input type="submit" class="button" value="Vote">
     </form>
