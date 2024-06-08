@@ -1,5 +1,9 @@
 {%load static%}
 <link rel="stylesheet" href="{% static 'detail/style.css' %}">
+<img width='100px' src="{%static 'detail/image/anime.png'%}" alt=""/>
+<br>
+<div class='vote-image'></div>
+
 <form action="./{{question.question_id}}vote/" method="post">
     {% csrf_token %}
     <fieldset>
